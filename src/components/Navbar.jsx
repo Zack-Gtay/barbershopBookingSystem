@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FiShoppingCart } from "react-icons/fi";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,13 +17,13 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between px-3 md:px-20 lg:px-20 py-4 text-white relative">
       {/* Logo */}
-      <Link to="/" className="text-2xl flex flex-col gap-0">
+      <a href="/" className="text-2xl flex flex-col gap-0">
         <p className="font-satisfy text-customOrange text-4xl mb-[-10px]">The</p>
         <p>
           <span className="text-black font-semibold">LICERIA</span>
           <span className="text-customOrange">SALON</span>
         </p>
-      </Link>
+      </a>
 
       {/* Navigation Links */}
       <ul
@@ -34,12 +33,12 @@ const Navbar = () => {
       >
         {navLinks.map((link) => (
           <li key={link.path}>
-            <Link
-              to={link.path}
+            <a
+              href=""
               className="hover:text-customOrange cursor-pointer py-2 md:py-0 transition-all duration-300"
             >
               {link.name}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>
